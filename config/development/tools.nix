@@ -16,4 +16,14 @@ in
     # Language Server for Nix-Language (format, autocomplete, etc.) -> use in VSCodium Nix Extension pack
     unstable.rnix-lsp
   ];
+
+  # GnuPG
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
+  # PostgreSQL
+  services.postgresql.enable = true;
 }
