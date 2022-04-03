@@ -17,13 +17,6 @@ in
     unstable.rnix-lsp
   ];
 
-  # GnuPG
-  services.pcscd.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
   # PostgreSQL
   services.postgresql.enable = true;
 }
