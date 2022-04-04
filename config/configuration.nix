@@ -28,7 +28,6 @@
     ];
 
   # Temp
-  nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "electron-13.6.9"
   ];
