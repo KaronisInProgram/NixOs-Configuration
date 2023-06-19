@@ -5,7 +5,7 @@ let
 in
 {
   environment.systemPackages = [
-    unstable.roslyn
-    unstable.dotnet-sdk_8
+    unstable.conda
+    unstable.python311
   ];
 }

@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
+
 {
   imports =
     [
@@ -12,12 +13,14 @@
       ./hardware-configuration.nix
       # Load common (default) configurations.
       ./common/boot.nix
+      ./common/security.nix
       ./common/network.nix
       ./common/localization.nix
       ./common/upgrade.nix
       ./common/desktop.nix
       ./common/printing.nix
       ./common/audio.nix
+      ./common/bluetooth.nix
       ./common/software.nix
       # Configurate the Users
       ./user/karonis.nix
@@ -25,12 +28,10 @@
       ./development/tools.nix
       ./development/language/java.nix
       ./development/language/csharp.nix
+      ./development/language/python.nix
+      # Configuration for games
+      ./game/game.nix
     ];
-
-  # Temp
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-13.6.9"
-  ];
 
   # Enable touchpad support.
   services.xserver.libinput.enable = true;

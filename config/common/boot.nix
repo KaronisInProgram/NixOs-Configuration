@@ -6,5 +6,5 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Clean temp-folder on startup.
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
 }

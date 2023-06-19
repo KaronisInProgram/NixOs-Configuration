@@ -9,7 +9,7 @@
   services.xserver.displayManager.defaultSession = "xfce";
 
   # Customise the Filebrowser
-  services.xserver.desktopManager.xfce.thunarPlugins = [
+  programs.thunar.plugins = [
     pkgs.xfce.thunar-archive-plugin
     pkgs.xfce.thunar-volman
   ];

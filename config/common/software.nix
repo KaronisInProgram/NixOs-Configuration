@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -15,17 +17,26 @@
     # xfce-Plugins
     xfce.xfce4-battery-plugin
 
-    # Basic "Textediting and calculation"-Pack
-    #libreoffice
-    texmaker
+    # Office Tools
+    libreoffice
+    texstudio
+    p7zip
 
     # Social-Apps
-    schildichat-desktop
+    discord
 
     # Security
     gnupg
     libsecret
+
+    # Whitepaper
+    zotero
   ];
+
+  # Secret management
+  #services.passSecretService.enable = true;
+  #services.passSecretService.package = pkgs.libsecret;
+  services.gnome.gnome-keyring.enable = true;
 
   # GnuPG
   services.pcscd.enable = true;
@@ -33,4 +44,7 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  # Privacy
+  #services.i2pd.enable = true;
 }

@@ -5,7 +5,7 @@ let
 in
 {
   environment.systemPackages = [
-    unstable.adoptopenjdk-hotspot-bin-16
+    unstable.adoptopenjdk-bin
     unstable.maven
     unstable.gradle
   ];

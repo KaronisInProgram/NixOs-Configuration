@@ -3,5 +3,10 @@
 {
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+
+  # Enable Pulsaudio with bletooths.
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
 }
