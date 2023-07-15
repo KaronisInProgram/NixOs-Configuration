@@ -17,6 +17,7 @@ in
 
     # Language Server for Nix-Language (format, autocomplete, etc.) -> use in VSCodium Nix Extension pack
     unstable.rnix-lsp
+    unstable.direnv
 
     # SDK for DotNet-Languages
     unstable.roslyn
