@@ -5,7 +5,6 @@ let
 in
 {
   environment.systemPackages = [
-    unstable.roslyn
-    unstable.dotnet-sdk_8
+    # Use for specific c# Tools
   ];
 }

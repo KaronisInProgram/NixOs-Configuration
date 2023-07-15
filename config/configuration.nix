@@ -28,7 +28,6 @@
       ./development/tools.nix
       ./development/language/java.nix
       ./development/language/csharp.nix
-      ./development/language/python.nix
       # Configuration for games
       ./game/game.nix
     ];

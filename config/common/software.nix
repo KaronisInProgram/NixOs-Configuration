@@ -19,8 +19,9 @@
 
     # Office Tools
     libreoffice
-    texstudio
     p7zip
+    texstudio
+    texlive.combined.scheme-full
 
     # Social-Apps
     discord
