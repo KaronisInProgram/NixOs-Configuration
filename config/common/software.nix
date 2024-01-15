@@ -26,17 +26,22 @@
     # Social-Apps
     discord
 
+    # Video
+    mpv
+    haruna
+
     # Security
     gnupg
     libsecret
 
     # Whitepaper
     zotero
+
+    # Screenshot
+    shutter
   ];
 
   # Secret management
-  #services.passSecretService.enable = true;
-  #services.passSecretService.package = pkgs.libsecret;
   services.gnome.gnome-keyring.enable = true;
 
   # GnuPG
@@ -46,6 +51,7 @@
     enableSSHSupport = true;
   };
 
-  # Privacy
-  #services.i2pd.enable = true;
+  # USB auto mount
+  services.devmon.enable = true;
+  programs.udevil.enable = true;
 }

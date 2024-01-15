@@ -12,8 +12,6 @@ in
     unstable.docker
 
     unstable.vscodium-fhs
-    unstable.jetbrains.idea-community
-    unstable.jetbrains.rider
 
     # Language Server for Nix-Language (format, autocomplete, etc.) -> use in VSCodium Nix Extension pack
     unstable.rnix-lsp
@@ -22,5 +20,14 @@ in
     # SDK for DotNet-Languages
     unstable.roslyn
     unstable.dotnet-sdk_7
+
+    # Python Microcontroller
+    unstable.thonny
+
+    # Pythoon language
+    unstable.python311
+    unstable.python311Packages.pip
   ];
+
+  virtualisation.docker.enable = true;
 }
