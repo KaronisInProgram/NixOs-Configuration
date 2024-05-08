@@ -8,13 +8,24 @@ let
 in
 {
   environment.systemPackages = [
+    # VM
     unstable.git
     unstable.docker
 
+    # BlockChain
+    unstable.go-ethereum
+
+    # Javascript
     unstable.vscodium-fhs
+    unstable.nodejs
+    unstable.typescript
+
+    # Java
+    unstable.adoptopenjdk-bin
+    unstable.maven
+    unstable.gradle
 
     # Language Server for Nix-Language (format, autocomplete, etc.) -> use in VSCodium Nix Extension pack
-    unstable.rnix-lsp
     unstable.direnv
 
     # SDK for DotNet-Languages

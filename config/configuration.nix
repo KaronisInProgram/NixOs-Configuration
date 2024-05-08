@@ -26,8 +26,6 @@
       ./user/karonis.nix
       # Configuration for development
       ./development/tools.nix
-      ./development/language/java.nix
-      ./development/language/csharp.nix
       # Configuration for games
       ./game/game.nix
     ];
