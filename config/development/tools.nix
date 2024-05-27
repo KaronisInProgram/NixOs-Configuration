@@ -15,6 +15,9 @@ in
     # BlockChain
     unstable.go-ethereum
 
+    # Go - Programming Language
+    unstable.go
+
     # Javascript
     unstable.vscodium-fhs
     unstable.nodejs
