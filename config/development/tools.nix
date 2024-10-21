@@ -8,27 +8,16 @@ let
 in
 {
   environment.systemPackages = [
-    # VM
+
     unstable.git
-    unstable.docker
-
-    # BlockChain
-    unstable.go-ethereum
-
-    # Go - Programming Language
-    unstable.go
 
     # Javascript
     unstable.vscodium-fhs
     unstable.nodejs
     unstable.typescript
 
-    # Java
-    unstable.adoptopenjdk-bin
-    unstable.maven
-    unstable.gradle
-
-    # Language Server for Nix-Language (format, autocomplete, etc.) -> use in VSCodium Nix Extension pack
+    # Language Server for Nix-Language (format, autocomplete, etc.)
+    unstable.nil
     unstable.direnv
 
     # SDK for DotNet-Languages
@@ -37,11 +26,13 @@ in
 
     # Python Microcontroller
     unstable.thonny
+    unstable.esptool
 
-    # Pythoon language
+    # Python language
     unstable.python311
     unstable.python311Packages.pip
-  ];
 
-  virtualisation.docker.enable = true;
+    # Webdev
+    unstable.insomnia
+  ];
 }
