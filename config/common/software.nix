@@ -19,7 +19,8 @@
 
     # Office Tools
     libreoffice
-    p7zip
+    zip
+    unzip
     texstudio
     texlive.combined.scheme-full
 

@@ -3,10 +3,10 @@
 {
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.layout = "de";
-  services.xserver.xkbOptions = "eurosign:e";
+  services.xserver.xkb.layout = "de";
+  services.xserver.xkb.options = "eurosign:e";
   services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.displayManager.defaultSession = "xfce";
+  services.displayManager.defaultSession = "xfce";
 
   # Customise the Filebrowser
   programs.thunar.plugins = [

@@ -22,6 +22,7 @@
       ./common/audio.nix
       ./common/bluetooth.nix
       ./common/software.nix
+      ./common/software-unstable.nix
       # Configurate the Users
       ./user/karonis.nix
       # Configuration for development
@@ -31,7 +32,7 @@
     ];
 
   # Enable touchpad support.
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
