@@ -1,38 +1,38 @@
 # packages not tailord for one specific language
 { config, pkgs, ... }:
 
-let
-  #unstable = import <nixos-unstable> { };
-  # example for unfree licence software.
-  unstable = import <nixos-unstable> { config.allowUnfree = true; };
-in
-{
-  environment.systemPackages = [
 
-    unstable.git
+{
+  environment.systemPackages = with pkgs; [
 
     # Javascript
-    unstable.vscodium-fhs
-    unstable.nodejs
-    unstable.typescript
+    vscodium-fhs
 
     # Language Server for Nix-Language (format, autocomplete, etc.)
-    unstable.nil
-    unstable.direnv
+    nil
+    direnv
 
     # SDK for DotNet-Languages
-    unstable.roslyn
-    unstable.dotnet-sdk_7
+    # roslyn
+    # dotnetCorePackages.sdk_8_0-bin
+    # dotnetCorePackages.sdk_9_0-bin
+    # dotnetCorePackages.sdk_10_0-bin
+    #
+    # Remove and Use Nix-Shell?
 
     # Python Microcontroller
-    unstable.thonny
-    unstable.esptool
-
-    # Python language
-    unstable.python311
-    unstable.python311Packages.pip
+    thonny
+    esptool
 
     # Webdev
-    unstable.insomnia
+    insomnia
   ];
+
+  # Source Control
+  programs.git.enable = true;
+  programs.git.lfs.enable = true;
+  services.legit.enable = true;
+
+  # Android - ADB
+  programs.adb.enable = true;
 }

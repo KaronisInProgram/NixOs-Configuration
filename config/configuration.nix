@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports =
     [
       # Default profile for lenovo thinkpad t495 (fixes, etc.) 
@@ -12,17 +14,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # Load common (default) configurations.
-      ./common/boot.nix
-      ./common/security.nix
-      ./common/network.nix
-      ./common/localization.nix
-      ./common/upgrade.nix
-      ./common/desktop.nix
-      ./common/printing.nix
-      ./common/audio.nix
-      ./common/bluetooth.nix
-      ./common/software.nix
-      ./common/software-unstable.nix
+      ./common
       # Configurate the Users
       ./user/karonis.nix
       # Configuration for development
@@ -30,9 +22,6 @@
       # Configuration for games
       ./game/game.nix
     ];
-
-  # Enable touchpad support.
-  services.libinput.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

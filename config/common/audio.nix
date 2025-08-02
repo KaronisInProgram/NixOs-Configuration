@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  # Enable sound.
-  sound.enable = true;
-
-  # Enable Pulsaudio with bletooths.
-  hardware.pulseaudio = {
+  # rtkit is optional but recommended
+  security.rtkit.enable = true;
+  services.pipewire = {
     enable = true;
-    package = pkgs.pulseaudioFull;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 }

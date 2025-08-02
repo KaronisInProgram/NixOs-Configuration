@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    pkgs.qgo
-    pkgs.gnugo
+  environment.systemPackages  = with pkgs; [
+    qgo
+    gnugo
   ];
 }

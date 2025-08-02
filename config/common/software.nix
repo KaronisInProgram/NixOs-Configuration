@@ -10,30 +10,23 @@
     # Browser
     ungoogled-chromium
     firefox
+    librewolf
 
     # Passwordmanagement
     keepassxc
 
-    # xfce-Plugins
-    xfce.xfce4-battery-plugin
-
     # Office Tools
+    peazip
     libreoffice
-    zip
-    unzip
     texstudio
-    texlive.combined.scheme-full
+    texliveFull
 
-    # Social-Apps
+    # Social
     discord
 
     # Video
     mpv
     haruna
-
-    # Security
-    gnupg
-    libsecret
 
     # Whitepaper
     zotero
@@ -42,8 +35,15 @@
     shutter
   ];
 
-  # Secret management
-  services.gnome.gnome-keyring.enable = true;
+  ##### Software per Options #####
+  # Browser
+  programs.firefox.enable = true;
+
+  # E-Mail
+  programs.thunderbird.enable = true;
+
+  # Enable dconf-configuration system
+  programs.dconf.enable = true;
 
   # GnuPG
   services.pcscd.enable = true;
@@ -51,8 +51,4 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  # USB auto mount
-  services.devmon.enable = true;
-  programs.udevil.enable = true;
 }

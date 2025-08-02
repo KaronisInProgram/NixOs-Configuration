@@ -8,6 +8,7 @@
       "wheel" # -> Enable ‘sudo’ for the user.
       "networkmanager" # -> Enable changing of network settings
       "dialout" # -> Enable communication with devices in dev\
+      "adbusers" # -> for Android Debugging
     ];
   };
 }
